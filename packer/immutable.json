@@ -1,14 +1,14 @@
 {
     "variables": {
         "var_id": "",
-        "var_image_family": "reddit-base",
+        "var_image_family": "reddit-full",
         "var_source_family": "",
         "var_zone": "europe-north1-a",
         "var_ssh_username": "alex",
         "var_machine_type": "f1-micro",
         "var_disk_size": "10",
         "var_disk_type": "pd-ssd",
-        "var_description": "HW-05 packer image",
+        "var_description": "HW-05 packer full image",
         "var_network": "default",
         "var_tags": "puma-server"
     },
@@ -32,12 +32,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
+            "script": "files/run_reddit_app.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
