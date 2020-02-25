@@ -4,7 +4,7 @@ eshenko Infra repository
 Домашнее задание 3
 ==================
 
-bastion_IP = 35.228.248.246 <br/>
+bastion_IP = 35.228.248.246
 someinternalhost_IP = 10.166.0.3
 
 
