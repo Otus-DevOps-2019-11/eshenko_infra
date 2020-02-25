@@ -40,3 +40,4 @@ ssh bastion и ssh someinternalhost
 
 Ошибка:
 "Error creating new account :: too many registrations for this IP: see https://letsencrypt.org/docs/rate-limits/"
+
