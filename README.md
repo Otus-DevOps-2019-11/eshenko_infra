@@ -13,20 +13,20 @@ someinternalhost_IP = 10.166.0.3
 
 Для доступа к someinternalhost напрямую, необходимо добавить следующие настройки в ~/.ssh/config
 
-  Host bastion
-    User alex
-    Hostname 35.228.248.246
-    Port 22
-    IdentityFile ~/.ssh/alex
-    ForwardAgent yes
+    Host bastion
+      User alex
+      Hostname 35.228.248.246
+      Port 22
+      IdentityFile ~/.ssh/alex
+      ForwardAgent yes
 
-  Host someinternalhost
-    User alex
-    Hostname 10.166.0.3
-    Port 22
-    IdentityFile ~/.ssh/alex
-    ForwardAgent yes
-    ProxyJump alex@35.228.248.246
+    Host someinternalhost
+      User alex
+      Hostname 10.166.0.3
+      Port 22
+      IdentityFile ~/.ssh/alex
+      ForwardAgent yes
+      ProxyJump alex@35.228.248.246
 
 После чего к серверам можно подключаться командами
 ssh bastion и ssh someinternalhost
