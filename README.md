@@ -1,6 +1,24 @@
 # eshenko_infra
 eshenko Infra repository
 
+Домашнее задание 5
+==================
+
+В рамках основного задания создан образ reddit-base с использованием packer шаблона. <br/>
+Запуск построения образа: <br/>
+packer build -var-file=./packer/variables.json ./packer/ubuntu16.json
+
+В рамках самостоятельного заданмя 1 в шаблон добавлены пользовательские переменные. <br/>
+В рамках самостоятельного задания 2 добавлен файл переменных variables.json (variables.json.example). <br/>
+В рамках самостоятельного задания 3 добавлены новые пользовательские переменные. <br/>
+В рамках задания со звездочкой 1 создан образ reddit-full поверх созданного в основном задании образа reddit-base.
+
+Запуск построения образа: <br/>
+packer build -var-file=./packer/files/variables.json ./packer/immutable.json
+
+В рамках задания со звездочкой 2 создан скрипт config-scripts/create-reddit-vm.sh для создания экзмепляра на основе образа reddit-full.
+
+
 
 Домашнее задание 4
 ==================
