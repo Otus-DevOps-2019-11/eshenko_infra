@@ -1,6 +1,46 @@
 # eshenko_infra
 eshenko Infra repository
 
+
+Домашнее задание 4
+==================
+
+testapp_IP = 35.228.215.244
+testapp_port = 9292
+
+Самостоятельное задание
+-----------------------
+
+Скрипты install_ruby.sh, install_mongodb.sh, deploy.sh, startup.sh  приложены
+
+Команда для запуска со startup скриптом:
+
+    gcloud compute instances create reddit-app \
+      --boot-disk-size=10GB \
+      --image-family ubuntu-1604-lts \
+      --image-project=ubuntu-os-cloud \
+      --machine-type=g1-small \
+      --tags puma-server \
+      --restart-on-failure \
+      --metadata-from-file startup-script=./startup.sh
+
+Дополнительное задание
+----------------------
+
+Создание правила брандмауэра через консоль:
+
+    gcloud compute firewall-rules create default-puma-server \
+      --network default \
+      --direction ingress \
+      --action allow \
+      --target-tags puma-server \
+      --source-ranges 0.0.0.0/0 \
+      --rules tcp:9292 \
+      --no-disabled
+
+
+
+
 Домашнее задание 3
 ==================
 
@@ -40,4 +80,3 @@ ssh bastion и ssh someinternalhost
 
 Ошибка:
 "Error creating new account :: too many registrations for this IP: see https://letsencrypt.org/docs/rate-limits/"
-
