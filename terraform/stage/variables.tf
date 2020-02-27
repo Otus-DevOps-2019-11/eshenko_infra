@@ -8,9 +8,6 @@ variable region {
 variable public_key_path {
   description = "Path to the public key used for ssh access"
 }
-variable disk_image {
-  description = "Disk image"
-}
 variable private_key_path {
   description = "Path to the private key used for ssh access"
 }
@@ -20,9 +17,12 @@ variable zone {
 }
 variable app_disk_image {
   description = "Disk image for reddit app"
-  default     = "reddit-app-base"
+  default     = "reddit-app-ansible"
 }
 variable db_disk_image {
   description = "Disk image for reddit db"
-  default     = "reddit-db-base"
+  default     = "reddit-db-ansible"
+}
+variable "prov_on" {
+  default = false
 }

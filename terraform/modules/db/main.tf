@@ -24,8 +24,7 @@ resource "google_compute_instance" "db" {
   }
   provisioner "remote-exec" {
     inline = [
-      "sudo sed -i 's/127.0.0.1/${self.network_interface[0].network_ip}/g' /etc/mongod.conf",
-      "sudo systemctl restart mongod",
+      var.prov_on ? "sudo sed -i 's/127.0.0.1/${self.network_interface[0].network_ip}/g' /etc/mongod.conf && sudo systemctl restart mongod" : "true",
     ]
   }
 }

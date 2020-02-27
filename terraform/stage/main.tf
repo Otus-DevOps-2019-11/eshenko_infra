@@ -11,6 +11,7 @@ module "app" {
   zone             = var.zone
   app_disk_image   = var.app_disk_image
   database_url     = "${module.db.db_internal_ip}:27017"
+  prov_on          = var.prov_on
 }
 
 module "db" {
@@ -19,6 +20,7 @@ module "db" {
   private_key_path = var.private_key_path
   zone             = var.zone
   db_disk_image    = var.db_disk_image
+  prov_on          = var.prov_on
 }
 
 module "vpc" {

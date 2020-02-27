@@ -1,6 +1,23 @@
 # eshenko_infra
 eshenko Infra repository
 
+Домашнее задание 9
+==================
+
+Один ansible playbook, один сценарий <br/>
+ansible-playbook ./ansible/reddit_app_one_play.yml --limit db --tags db-tag <br/>
+ansible-playbook reddit_app_one_play.yml --limit app --tags app-tag <br/>
+ansible-playbook reddit_app_one_play.yml --limit app --tags deploy-tag
+
+Один playbook, несколько сценариев <br/>
+ansible-playbook reddit_app_multiple_plays.yml --tags db-tag <br/>
+ansible-playbook reddit_app_multiple_plays.yml --tags app-tag <br/>
+ansible-playbook reddit_app_multiple_plays.yml --tags deploy-tag <br/>
+ansible-playbook reddit_app_multiple_plays.yml
+
+Несколько плейбуков <br/>
+ansible-playbook site.yml
+
 Домашнее задание 8
 ==================
 

@@ -7,3 +7,4 @@ packer/files/variables.json
 *.tfvars
 .terraform/
 .DS_Store
+*.retry

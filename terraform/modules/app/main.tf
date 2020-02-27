@@ -26,10 +26,10 @@ resource "google_compute_instance" "app" {
   }
   provisioner "file" {
     content     = templatefile("${path.module}/puma.service.tmpl", { database_url = var.database_url })
-    destination = "/tmp/puma.service"
+    destination = var.prov_on ? "/tmp/puma.service" : "/dev/null"
   }
   provisioner "remote-exec" {
-    script = "${path.module}/deploy.sh"
+    script = var.prov_on ? "${path.module}/deploy.sh" : null
   }
 }
 
