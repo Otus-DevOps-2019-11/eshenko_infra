@@ -1,7 +1,7 @@
 {
     "variables": {
         "var_id": "",
-        "var_image_family": "reddit-app-base",
+        "var_image_family": "reddit-app-ansible",
         "var_source_family": "",
         "var_zone": "europe-north1-b",
         "var_ssh_username": "appuser",
@@ -31,9 +31,8 @@
     ],
     "provisioners": [
         {
-            "type": "shell",
-            "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
+            "type": "ansible",
+            "playbook_file": "ansible/packer_app.yml"
         }
     ]
 }

@@ -16,3 +16,6 @@ variable "database_url" {
   description = "Reddit app database url"
   default     = "127.0.0.1:27017"
 }
+variable "prov_on" {
+  default = false
+}
