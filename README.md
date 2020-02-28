@@ -1,6 +1,15 @@
 # eshenko_infra
 eshenko Infra repository
 
+Домашнее задание 8
+==================
+
+После выполнения команды ansible app -m command -a 'rm -rf ~/reddit' и запуске команды ansible-playbook clone.yml в результате получаем статус changed=1, так как ansible внес изменения в первоначальное состояние
+
+Создан inventory.json с использованием динамической схемы. <br/>
+Создан скрипт inventory.sh для использования динамического inventory. <br/>
+В ansible.cfg внесены изменения для работы с JSON inventory.
+
 Домашнее задание 7
 ==================
 
