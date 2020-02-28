@@ -8,3 +8,4 @@ packer/files/variables.json
 .terraform/
 .DS_Store
 *.retry
+jdauphant.nginx
